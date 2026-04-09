@@ -1,0 +1,38 @@
+DEEPDENT: CONTRIBUTOR SETUP & TESTING GUIDE
+===========================================
+
+PHASE 1: ENVIRONMENT SETUP
+--------------------------
+1. Clone the repository:
+   git clone https://github.com/RRonium/DeepDent.git
+   cd DeepDent
+
+2. Install required libraries:
+   pip install -r requirements.txt
+
+PHASE 2: AUTHENTICATION (FOR TRAINING ONLY)
+-------------------------------------------
+If you intend to re-train the model or download the dataset:
+1. Go to Kaggle -> Settings -> Create New API Token.
+2. Download 'kaggle.json'.
+3. Place 'kaggle.json' in your user folder (~/.kaggle/ on Mac/Linux or C:\Users\<User>\.kaggle\ on Windows).
+
+PHASE 3: RUNNING THE MODEL (TESTING)
+------------------------------------
+Since the trained model (deepdent_model.h5) is already in the repo, 
+you do not need to run the Jupyter Notebook unless you want to re-train.
+
+To test the model via the Web UI:
+1. Run the Streamlit app:
+   streamlit run app.py
+
+2. Open the URL provided in your terminal (usually http://localhost:8501).
+3. Upload a dental OPG X-ray (JPG/PNG/JPEG).
+4. View the AI prediction and confidence score.
+
+PHASE 4: PROJECT STRUCTURE REFERENCE
+------------------------------------
+- DeepDent_Train.ipynb : The core AI training logic and data pipeline.
+- app.py               : The Streamlit frontend for user interaction.
+- deepdent_model.h5    : The saved Neural Network weights.
+- requirements.txt     : List of all Python dependencies.

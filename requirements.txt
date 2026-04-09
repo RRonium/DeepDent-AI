@@ -1,0 +1,7 @@
+tensorflow
+streamlit
+pillow
+numpy
+split-folders
+kaggle
+matplotlib
